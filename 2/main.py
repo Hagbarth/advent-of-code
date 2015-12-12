@@ -1005,10 +1005,6 @@ for gift in input:
   l = gift[0]
   w = gift[1]
   h = gift[2]
-  lw = l * w
-  wh = w * h
-  hl = h * l
-  lowest = min([lw, wh, hl])
-  total += (2 * lw) + (2 * wh) + (2 * hl) + lowest
+  total += (2 * l * w) + (2 * w * h) + (2 * h * l) + min([l * w, w * h, h * l])
 
 print total
